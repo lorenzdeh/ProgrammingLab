@@ -5,9 +5,7 @@ def sum_csv(file_name):
         elements = line.split(',')
         if elements[0] != 'Date':
             value = elements[1]
-            #.strip('\n')
-            if isfloat(value):  #isNumeric()
-                #Funziona ma dovrebbe esserci un altro modo per controllare se una variabile è float/int, ma da google al momento non trovo nulla che funzioni (isinstance(value, (float, int)), type(value) == float, non funzionano)
+            if isfloat(value):
                 values.append(float(value))
     file.close()
     if not values:

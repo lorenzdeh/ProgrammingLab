@@ -1,5 +1,4 @@
 class CSVFile():
-    name = ""
 
     def __init__(self, name):
         self.name = name
@@ -7,7 +6,6 @@ class CSVFile():
     def get_data(self):
         val = []
         file = open(self.name, 'r')
-        print('')
         for item in file:
             elements = item.split(',')
             if elements[0] != 'Date':
